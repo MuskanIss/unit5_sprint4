@@ -1,11 +1,17 @@
 import React, { useContext } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { RegisPage } from "./RegisterPage";
 
 export const Home = () => {
-  const { loginEmail, setLoginEmail, setIsLogin, isLogin, setForm, form } =
-    useContext(RegisPage);
-  const navigate = useNavigate();
+  const {
+    loginEmail,
+    setLoginEmail,
+    setIsLogin,
+    isLogin,
+    setForm,
+    form,
+    navigate,
+  } = useContext(RegisPage);
   const login = (e) => {
     e.preventDefault();
     console.log(isLogin);
@@ -43,6 +49,7 @@ export const Home = () => {
             onChange={(e) =>
               setLoginEmail({ ...loginEmail, email: e.currentTarget.value })
             }
+            value={loginEmail.email}
           />
           <br />
           <label>Password</label>
@@ -51,6 +58,7 @@ export const Home = () => {
             onChange={(e) =>
               setLoginEmail({ ...loginEmail, password: e.currentTarget.value })
             }
+            value={loginEmail.password}
           />
           <br />
           <input type="submit" value="LOGIN" />

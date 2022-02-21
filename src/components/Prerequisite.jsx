@@ -1,10 +1,9 @@
 import { RegisPage } from "./RegisterPage";
 import React, { useContext } from "react";
-import { useNavigate } from "react-router-dom";
 
 export const Prerequisite = () => {
-  const { preReq, setPreReq } = useContext(RegisPage);
-  const navigate = useNavigate();
+  const { preReq, setPreReq, navigate } = useContext(RegisPage);
+
   const prere = (e) => {
     e.preventDefault();
     if (preReq.attend && preReq.laptop) {
@@ -19,6 +18,7 @@ export const Prerequisite = () => {
           onChange={(e) =>
             setPreReq({ ...preReq, attend: e.currentTarget.checked })
           }
+          checked={preReq.attend}
         />
         <label>Can you attend 90% of the classess</label>
         <br />
@@ -27,6 +27,7 @@ export const Prerequisite = () => {
           onChange={(e) =>
             setPreReq({ ...preReq, laptop: e.currentTarget.checked })
           }
+          checked={preReq.laptop}
         />
         <label>Do you have a laptop?</label>
         <br />

@@ -1,11 +1,10 @@
 import { RegisPage } from "./RegisterPage";
 import React, { useContext } from "react";
-import { Navigate, useNavigate } from "react-router-dom";
+import { Navigate } from "react-router-dom";
 import { v4 as uuid } from "uuid";
 
 export const Info = () => {
-  const { preReq, form, setForm } = useContext(RegisPage);
-  const navigate = useNavigate();
+  const { preReq, form, setForm, navigate } = useContext(RegisPage);
   const formSub = (e) => {
     e.preventDefault();
     setForm({ ...form, id: uuid() });
@@ -28,6 +27,7 @@ export const Info = () => {
             onChange={(e) =>
               setForm({ ...form, qualification: e.currentTarget.value })
             }
+            value={form.qualification}
           />
           <br />
           <label>Passing Year</label>
@@ -35,12 +35,14 @@ export const Info = () => {
             onChange={(e) =>
               setForm({ ...form, passingYear: e.currentTarget.value })
             }
+            value={form.passingYear}
           />
           <br />
           <label>Date of birth</label>
           <input
             type="date"
             onChange={(e) => setForm({ ...form, date: e.currentTarget.value })}
+            value={form.date}
           />
           <br />
           <label>Gender</label>
@@ -48,6 +50,7 @@ export const Info = () => {
             onChange={(e) =>
               setForm({ ...form, gender: e.currentTarget.value })
             }
+            value={form.gender}
           >
             <option></option>
             <option value="Male">Male</option>
@@ -57,6 +60,7 @@ export const Info = () => {
           <br />
           <label>State</label>
           <input
+            value={form.state}
             onChange={(e) => setForm({ ...form, state: e.currentTarget.value })}
           />
           <input

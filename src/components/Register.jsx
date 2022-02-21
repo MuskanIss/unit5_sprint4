@@ -1,10 +1,9 @@
 import { RegisPage } from "./RegisterPage";
 import React, { useContext } from "react";
-import { Navigate, useNavigate } from "react-router-dom";
+import { Navigate } from "react-router-dom";
 
 export const Register = () => {
-  const { setForm, form } = useContext(RegisPage);
-  const navigate = useNavigate();
+  const { setForm, form, navigate } = useContext(RegisPage);
   const regiser = (e) => {
     e.preventDefault();
     if (
@@ -40,6 +39,7 @@ export const Register = () => {
           <label>Email address</label>
           <input
             onChange={(e) => setForm({ ...form, Email: e.currentTarget.value })}
+            value={form.Email}
           />
           <br />
           <label>Password</label>
@@ -48,6 +48,7 @@ export const Register = () => {
             onChange={(e) =>
               setForm({ ...form, Password: e.currentTarget.value })
             }
+            value={form.Password}
           />
           <br />
           <label>Full Name</label>
@@ -55,6 +56,7 @@ export const Register = () => {
             onChange={(e) =>
               setForm({ ...form, fullName: e.currentTarget.value })
             }
+            value={form.fullName}
           />
           <br />
           <input type="submit" value="SIGN UP" />
