@@ -6,6 +6,7 @@ export const RegisterPage = ({ children }) => {
   const [loginEmail, setLoginEmail] = React.useState({
     email: "",
     password: "",
+    fullName: "",
   });
   const [form, setForm] = React.useState({});
   const [preReq, setPreReq] = React.useState({ attend: false, laptop: false });

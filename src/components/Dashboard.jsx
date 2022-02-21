@@ -4,7 +4,7 @@ import React, { useContext } from "react";
 
 export const Dashboard = () => {
   const { isLogin, form } = useContext(RegisPage);
-  console.log(isLogin);
+  console.log(form);
   return (
     <div>
       {isLogin ? (

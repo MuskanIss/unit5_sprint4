@@ -3,7 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { RegisPage } from "./RegisterPage";
 
 export const Home = () => {
-  const { loginEmail, setLoginEmail, setIsLogin, isLogin } =
+  const { loginEmail, setLoginEmail, setIsLogin, isLogin, setForm, form } =
     useContext(RegisPage);
   const navigate = useNavigate();
   const login = (e) => {
@@ -17,6 +17,12 @@ export const Home = () => {
             loginEmail.email === item.Email &&
             loginEmail.password === item.Password
           ) {
+            setForm({
+              ...form,
+              fullName: item.fullName,
+              Email: item.Email,
+              Password: item.Password,
+            });
             setIsLogin(true);
             navigate("/dashboard");
             return null;
