@@ -1,0 +1,30 @@
+{
+  "loginInfo": [
+    {
+      "Email": "mi",
+      "Password": "123"
+    },
+    {
+      "qualification": "11",
+      "passingYear": "11",
+      "date": "2022-02-02",
+      "gender": "Male",
+      "state": "11",
+      "id": "1bd8ec51-0644-4e48-bb13-00bf5f6c81ab",
+      "Email": "1111",
+      "Password": "11",
+      "fullName": "11"
+    },
+    {
+      "qualification": "gt",
+      "passingYear": "23",
+      "date": "2022-02-02",
+      "gender": "Male",
+      "state": "21",
+      "id": "e10e58aa-351f-4461-b9eb-7f798fc6ca83",
+      "Email": "32",
+      "Password": "23",
+      "fullName": "21"
+    }
+  ]
+}
