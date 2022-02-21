@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { Link, Navigate, useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { RegisPage } from "./RegisterPage";
 
 export const Home = () => {
@@ -19,7 +19,9 @@ export const Home = () => {
           ) {
             setIsLogin(true);
             navigate("/dashboard");
+            return null;
           }
+          return null;
         });
       });
   };

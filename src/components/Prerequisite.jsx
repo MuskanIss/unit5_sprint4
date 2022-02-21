@@ -1,9 +1,6 @@
 import { RegisPage } from "./RegisterPage";
 import React, { useContext } from "react";
-import { Navigate, useNavigate } from "react-router-dom";
-import style from "styled-components";
-
-const CONTINUE = style.input``;
+import { useNavigate } from "react-router-dom";
 
 export const Prerequisite = () => {
   const { preReq, setPreReq } = useContext(RegisPage);
