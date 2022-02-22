@@ -16,7 +16,7 @@ export const Register = () => {
       form.Password &&
       form.fullName
     ) {
-      fetch("https://unit5-sprint4.vercel.app/loginInfo", {
+      fetch("https://json-servermusk.herokuapp.com/loginInfo", {
         method: "post",
         headers: {
           "Content-Type": "application/json",

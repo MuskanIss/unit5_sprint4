@@ -15,7 +15,7 @@ export const Home = () => {
   const login = (e) => {
     e.preventDefault();
     console.log(isLogin);
-    fetch("https://unit5-sprint4.vercel.app/loginInfo")
+    fetch("https://json-servermusk.herokuapp.com/loginInfo")
       .then((res) => res.json())
       .then((res) => {
         res.map((item) => {
