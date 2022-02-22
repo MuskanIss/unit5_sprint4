@@ -15,7 +15,7 @@ export const Home = () => {
   const login = (e) => {
     e.preventDefault();
     console.log(isLogin);
-    fetch("http://localhost:3000/loginInfo")
+    fetch("https://unit5-sprint4.vercel.app/loginInfo")
       .then((res) => res.json())
       .then((res) => {
         res.map((item) => {
